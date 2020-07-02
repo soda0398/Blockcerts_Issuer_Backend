@@ -7,6 +7,10 @@ get '/' do
 end
 
 get '/api/issuer_info' do
+  logfile = File.open("./logfile.txt","w");
+  logfile.write(request.body.read)
+  logfile.close
+
   content_type :json
   #{hello: "helloworld"}.to_json
   File.read("./public/issuer.json");
