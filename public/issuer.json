@@ -15,5 +15,8 @@
     }
   ],
   "revocationList": "https://www.blockcerts.org/samples/2.0/revocation-list-testnet.json",
-  "type": "Profile"
+  "type": "Profile",
+  "introductionURL": {
+    "format": "https://boxing-moose-39530.herokuapp.com/api/issuer_info"
+  }
 }
