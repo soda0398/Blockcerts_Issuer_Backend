@@ -14,5 +14,19 @@ end
 
 post '/api/issuer_info', provides: :json do
   params = JSON.parse request.body.read
+  []
+end
 
+
+get '/log' do
+  logfile = File.open("./logfile.txt","r")
+  contents = logfile.read
+  contents
+end
+
+post '/log' do
+  logfile = File.open("./logfile.txt","w");
+  logfile.write(request.body.read)
+  logfile.close
+  redirect '/log'
 end
