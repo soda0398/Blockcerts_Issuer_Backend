@@ -37,8 +37,8 @@ post '/log' do
 end
 
 get '/public/:test' do
-  if params['test'] == "working"
-    File.read("./public/working.json")
+  if params['test'] == "working2"
+    File.read("./public/working2.json")
   else
     "BYE"
   end
