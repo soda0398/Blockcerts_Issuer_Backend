@@ -1,2 +1,5 @@
-require './web_server'
+require 'bundler'
+Bundler.require
+
+require './bc_server'
 run Sinatra::Application
