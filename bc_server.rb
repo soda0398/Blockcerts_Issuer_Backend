@@ -13,8 +13,10 @@ get '/api/issuer_info' do
 end
 
 post '/api/issuer_info', provides: :json do
-  params = JSON.parse request.body.read
-  []
+  logfile = File.open("./logfile.txt","w");
+  logfile.write(request.body.read)
+  logfile.close
+  redirect '/log'
 end
 
 
