@@ -35,3 +35,11 @@ post '/log' do
   logfile.close
   redirect '/log'
 end
+
+get '/public/:test' do
+  if params['test'] == "working"
+    File.read("./public/working.json")
+  else
+    "BYE"
+  end
+end
