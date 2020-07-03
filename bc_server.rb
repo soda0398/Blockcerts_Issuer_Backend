@@ -1,5 +1,4 @@
 require 'sinatra'
-require "sinatra/reloader" if development?
 require 'json'
 
 get '/' do
@@ -37,3 +36,4 @@ get '/public/:test' do
   else
     "BYE"
   end
+end
