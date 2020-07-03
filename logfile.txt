@@ -1,1 +1,0 @@
-#<StringIO:0x00007fa2f307ecf0>GET

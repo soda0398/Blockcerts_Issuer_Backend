@@ -3,16 +3,11 @@ require "sinatra/reloader" if development?
 require 'json'
 
 get '/' do
-  'Wee World!'
+  'Hello World!'
 end
 
 get '/api/issuer_info' do
-  logfile = File.open("./logfile.txt","w");
-  logfile.write(request.body,request.request_method)
-  logfile.close
-
   content_type :json
-  #{hello: "helloworld"}.to_json
   File.read("./public/issuer.json");
 end
 
@@ -42,4 +37,3 @@ get '/public/:test' do
   else
     "BYE"
   end
-end
